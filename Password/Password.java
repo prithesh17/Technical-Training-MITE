@@ -1,3 +1,4 @@
+package Password;
 import java.util.Scanner;
 public class Password {
     public static void main(String[] args) {
