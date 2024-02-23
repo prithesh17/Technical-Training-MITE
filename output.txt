@@ -1,1 +1,1 @@
-Matrix multiplication is not possible.
+First occurrence: 2, Last occurrence: 5

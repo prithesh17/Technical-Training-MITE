@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Two {
     public static int[] find(int[] arr, int n, int x) {
         int first = -1;
         int last = -1;
