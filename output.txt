@@ -1,1 +1,1 @@
-First occurrence: 2, Last occurrence: 5
+The repeating and missing numbers are: {8, 9}

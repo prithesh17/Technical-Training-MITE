@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class One {
     public static int[] findMissingRepeatingNumbers(int[] a) {
         int n = a.length;
         int SN = (n * (n + 1)) / 2;
@@ -16,7 +16,7 @@ public class Main {
         int x = (val1 + val2) / 2;
         int y = x - val1;
         int[] ans = { x, y };
-        return ans;       
+        return ans;
     }
 
     public static void main(String[] args) {
