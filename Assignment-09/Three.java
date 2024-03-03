@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main {
+class Three {
     public static char nonrepeatingCharacter(String S) {
         int[] frequency = new int[26];
         for (char ch : S.toCharArray()) {
