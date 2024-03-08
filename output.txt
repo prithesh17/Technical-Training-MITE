@@ -1,1 +1,1 @@
-No non-repeating character found.
+Triplet found: 1, 40, 80
