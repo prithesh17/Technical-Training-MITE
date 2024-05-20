@@ -1,32 +1,42 @@
 import java.util.Scanner;
 
+import tools.ArrayMethod;
+
 class Main {
-    public static void findTripletSum(int[] arr, int X) {
-        int n = arr.length;
-        boolean found = false;
-        for (int i = 0; i < n - 2; i++) {
-            for (int j = i + 1; j < n - 1; j++) {
-                for (int k = j + 1; k < n; k++) {
-                    if (arr[i] + arr[j] + arr[k] == X) {
-                        System.out.println("Triplet found: " + arr[i] + ", " + arr[j] + ", " + arr[k]);
-                        found = true;
-                    }
-                }
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false; 
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
             }
         }
-        if (!found) {
-            System.out.println("No triplet found with sum " + X);
+        return true;
+    }
+
+    public static void rearrangeArray(int[] arr) {
+        int primeIndex = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i])) {
+                int temp = arr[primeIndex];
+                arr[primeIndex] = arr[i];
+                arr[i] = temp;
+                primeIndex++;
+            }
         }
     }
+
      public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
+      Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] ar = new int[n];
+        int[] a = new int[n];
         for (int i = 0; i < n; i++) {
-            ar[i] = sc.nextInt();
+            a[i] = sc.nextInt();
         }
-        int x = sc.nextInt();
-        findTripletSum(ar,x);
+        rearrangeArray(a);
+        ArrayMethod.printArray(a);
         sc.close();
     }
 }
